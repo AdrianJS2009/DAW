@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE operaciones [
+
+<!ELEMENT operaciones (operacion+)>
+<!ELEMENT operacion (venta*, compra*)+>
+<!ELEMENT venta (titulosvendidos)>
+<!ELEMENT titulosvendidos (titulo+, cantidad, entregado?, importe)>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT cantidad (#PCDATA)>
+<!ELEMENT entregado (#PCDATA)>
+<!ELEMENT importe (#PCDATA)>
+<!ATTLIST importe moneda CDATA #REQUIRED>
+<!ELEMENT compra (tituloscomprados)>
+<!ELEMENT tituloscomprados (titulo+, proveedor, fecha)>
+<!ELEMENT proveedor (#PCDATA)>
+<!ELEMENT fecha (dia, mes, año)>
+<!ELEMENT dia (#PCDATA)>
+<!ELEMENT mes (#PCDATA)>
+<!ELEMENT año (#PCDATA)>
+]>
+
+<operaciones>
+  <operacion>
+    <venta>
+      <titulosvendidos>
+        <titulo>El señor de los anillos</titulo>
+        <titulo>Harry Potter</titulo>
+        <cantidad>50</cantidad>
+        <entregado>si</entregado>
+        <importe moneda="EUR">1000</importe>
+      </titulosvendidos>
+    </venta>
+    <compra>
+      <tituloscomprados>
+        <titulo>El Hobbit</titulo>
+        <titulo>El juego de Ender</titulo>
+        <proveedor>Editorial Planeta</proveedor>
+        <fecha>
+          <dia>01</dia>
+          <mes>02</mes>
+          <año>2022</año>
+        </fecha>
+      </tituloscomprados>
+    </compra>
+  </operacion>
+</operaciones>

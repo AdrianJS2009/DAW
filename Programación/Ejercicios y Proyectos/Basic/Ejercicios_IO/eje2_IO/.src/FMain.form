@@ -1,0 +1,35 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,96,89)
+  { btnStart Button
+    MoveScaled(54.2857,10,29,13)
+    Font = Font["+6"]
+    Text = ("Calcular")
+  }
+  { btnReset Button
+    MoveScaled(12.5714,10,29,13)
+    Font = Font["+6"]
+    Text = ("Limpiar")
+  }
+  { lblResult Label
+    MoveScaled(14,35,68,39)
+    Font = Font["+7"]
+  }
+  { lblResult2 Label
+    MoveScaled(55,29,5,10)
+    Font = Font["+7"]
+    Text = ("Y")
+  }
+  { lblResult3 Label
+    MoveScaled(10,29,5,10)
+    Font = Font["+7"]
+    Text = ("X")
+  }
+  { txtY TextBox
+    MoveScaled(60.5714,29,30,10)
+  }
+  { txtX TextBox
+    MoveScaled(15.7143,29,29,10)
+  }
+}

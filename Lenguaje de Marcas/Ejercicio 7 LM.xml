@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mercado>
+    <futuro precio="1000">
+        <mercado>Madrid</mercado>
+    </futuro>
+    <divisa precio="1.5" estable="si">
+        <mercado>Nueva York</mercado>
+        <nombre>Libra</nombre>
+        <tipo_cambio>1.5</tipo_cambio>
+        <tipo_cambio>1.6</tipo_cambio>
+    </divisa>
+    <bono precio="1000" estable="no">
+        <mercado>Frankfurt</mercado>
+        <valor_deseado>1000</valor_deseado>
+        <valor_minimo>900</valor_minimo>
+        <valor_maximo>1100</valor_maximo>
+        <pais_de_procedencia>España</pais_de_procedencia>
+    </bono>
+    <letra precio="1000">
+        <mercado>Tokio</mercado>
+        <tipo_interes>5</tipo_interes>
+        <pais_emisor>EEUU</pais_emisor>
+    </letra>
+</mercado>
