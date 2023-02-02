@@ -1,36 +1,40 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
+<!DOCTYPE listado SYSTEM "listado.dtd">
+
 <listado>
-  <futuro valor="12.86">
-    <producto>Aluminio</producto>
-    <mercado>Bolsa de NY</mercado>
+  <futuro precio="12.59">
+    <producto>Salchichas</producto>
+    <mercado>Europa</mercado>
     <ciudad_procedencia>
-      <NuevaYork />
+      <Frankfurt/>
     </ciudad_procedencia>
   </futuro>
-  <divisa valor="Dólar">
-    <nombre_divisa>Dólar</nombre_divisa>
-    <tipo_de_cambio>1.2:1 €</tipo_de_cambio>
-    <tipo_de_cambio>1.3:0.86 $</tipo_de_cambio>
+  <divisa precio="1698">
+    <nombre_divisa>Euro</nombre_divisa>
+    <tipo_de_cambio>2.1:1 euros</tipo_de_cambio>
+    <tipo_de_cambio>1:0.87 dólares</tipo_de_cambio>
     <ciudad_procedencia>
-      <Tokio />
+      <Madrid/>
     </ciudad_procedencia>
   </divisa>
-  <bono precio="100" estable="no">
-    <pais_de_procedencia>EEUU</pais_de_procedencia>
-    <valor_deseado>100</valor_deseado>
-    <valor_minimo>90</valor_minimo>
-    <valor_maximo>110</valor_maximo>
+  <bono precio="19240" estable="no">
+    <pais_de_procedencia>
+      Marruecos
+    </pais_de_procedencia>
+    <valor_deseado>1250</valor_deseado>
+    <valor_minimo>3981</valor_minimo>
+    <valor_maximo>18090</valor_maximo>
     <ciudad_procedencia>
-      <Frankfurt />
+      <Tokio/>
     </ciudad_procedencia>
   </bono>
-  <letra valor="Fijo">
-    <tipo_de_interes>Fijo</tipo_de_interes>
+  <letra precio="96310">
+    <tipo_de_interes>7.91%</tipo_de_interes>
     <pais_emisor>
-      <Alemania />
+      <España/>
     </pais_emisor>
     <ciudad_procedencia>
-      <Madrid />
+      <Madrid/>
     </ciudad_procedencia>
   </letra>
 </listado>
