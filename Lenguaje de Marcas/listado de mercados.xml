@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<listado>
+  <futuro valor="12.86">
+    <producto>Aluminio</producto>
+    <mercado>Bolsa de NY</mercado>
+    <ciudad_procedencia>
+      <NuevaYork />
+    </ciudad_procedencia>
+  </futuro>
+  <divisa valor="Dólar">
+    <nombre_divisa>Dólar</nombre_divisa>
+    <tipo_de_cambio>1.2:1 €</tipo_de_cambio>
+    <tipo_de_cambio>1.3:0.86 $</tipo_de_cambio>
+    <ciudad_procedencia>
+      <Tokio />
+    </ciudad_procedencia>
+  </divisa>
+  <bono precio="100" estable="no">
+    <pais_de_procedencia>EEUU</pais_de_procedencia>
+    <valor_deseado>100</valor_deseado>
+    <valor_minimo>90</valor_minimo>
+    <valor_maximo>110</valor_maximo>
+    <ciudad_procedencia>
+      <Frankfurt />
+    </ciudad_procedencia>
+  </bono>
+  <letra valor="Fijo">
+    <tipo_de_interes>Fijo</tipo_de_interes>
+    <pais_emisor>
+      <Alemania />
+    </pais_emisor>
+    <ciudad_procedencia>
+      <Madrid />
+    </ciudad_procedencia>
+  </letra>
+</listado>
