@@ -3,11 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package com.politecnicomalaga.cajaFuerte;
-
-/**
- *
- * @author adriair-school
- */
 public class CajaFuerte {
     
     private String password;
