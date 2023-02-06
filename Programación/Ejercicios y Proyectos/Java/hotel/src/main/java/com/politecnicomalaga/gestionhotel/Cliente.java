@@ -13,7 +13,8 @@ public class Cliente {
     private final String dni, name, surname, address, email, phone, birthdate, age;
     private boolean hasDiscount;
 
-    public Cliente(String dni, String name, String surname, String address, String email, String phone, String birthdate, String age) {
+    public Cliente(String dni, String name, String surname, String address, String email, String phone,
+            String birthdate, String age) {
 
         this.dni = dni;
         this.name = name;
@@ -29,7 +30,8 @@ public class Cliente {
 
     public String[] getClientInformation() {
 
-        String[] elements = {this.dni, this.name, this.surname, this.address, this.email, this.phone, this.birthdate, this.age, String.valueOf(this.hasDiscount)};
+        String[] elements = { this.dni, this.name, this.surname, this.address, this.email, this.phone, this.birthdate,
+                this.age, String.valueOf(this.hasDiscount) };
 
         return elements;
 

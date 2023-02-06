@@ -11,7 +11,7 @@
               <xs:element name="titulo" type="xs:string"/>
               <xs:element name="contenido" type="xs:string"/>
             </xs:sequence>
-            <xs:attribute name="num" type="xs:integer"/>
+            <xs:attribute name="num" type="xs:integer" use="required"/>
             <xs:attribute name="dia" type="xs:date"/>
             <xs:attribute name="hora" type="xs:time"/>
           </xs:complexType>

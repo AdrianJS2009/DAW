@@ -12,7 +12,6 @@ import java.util.ArrayList;
  */
 public class Hotel {
 
-    private final String descripcion, nombre, telefono, correo, direccion;
     private final ArrayList<Cliente> client;
 
     public Hotel() {
@@ -41,11 +40,8 @@ public class Hotel {
                 System.out.println("Fecha de Nacimiento: " + client.get(i).getClientInformation()[6]);
                 System.out.println("Edad: " + client.get(i).getClientInformation()[7]);
 
-                
-
-                
-                }
-            } else {
+            }
+        } else {
 
             System.out.println("\n\nNo hay información de ese cliente.");
 
@@ -53,7 +49,8 @@ public class Hotel {
 
     }
 
-    public void añadirCliente(String dni, String nombre, String apellido, String direccion, String telefono, String correo, String fechanacimiento, String edad) {
+    public void añadirCliente(String dni, String nombre, String apellido, String direccion, String telefono,
+            String correo, String fechanacimiento, String edad) {
 
         client.add(new Cliente(dni, nombre, apellido, direccion, correo, telefono, fechanacimiento, edad));
 
@@ -68,14 +65,16 @@ public class Hotel {
                 if (client.get(i).getClientInformation()[0].equals(dni)) {
 
                     System.out.println("\n\n");
-                    System.out.println("Datos eliminados sobre el cliente: " + client.get(i).getClientInformation()[1] + " " + client.get(i).getClientInformation()[2]);
+                    System.out.println("Datos eliminados sobre el cliente: " + client.get(i).getClientInformation()[1]
+                            + " " + client.get(i).getClientInformation()[2]);
                     System.out.println("\n\n");
 
                     client.remove(client.get(i));
 
                 } else {
 
-                    System.out.println("La búsqueda no ha encontrado ninguna coincidencia, \nRevise los datos introducidos, cuidado con las letras mayusculas.");
+                    System.out.println(
+                            "La búsqueda no ha encontrado ninguna coincidencia, \nRevise los datos introducidos, cuidado con las letras mayusculas.");
 
                 }
 

@@ -3,6 +3,7 @@
  USE institutodb;
 
  CREATE TABLE alumno (
+
    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
    nombre VARCHAR(100) NOT NULL,
    apellido1 VARCHAR(100) NOT NULL,
@@ -26,3 +27,4 @@
  INSERT INTO alumno VALUES(12, 'Samuel', 'Sanchez', 'Acedo', '1998/11/23', 'si',251333777);
  INSERT INTO alumno VALUES(13, 'Juan', 'Sanchez', 'Acedo', '2000/12/20', 'si',251333444);
  INSERT INTO alumno VALUES(14, 'Zacarias', 'Sanchez', 'Acedo', '2001/12/25', 'si',251333555);
+  INSERT INTO alumno VALUES(15, 'Maria', 'Sanchez', 'Acedo', '2002/12/25', 'si',251333666);
