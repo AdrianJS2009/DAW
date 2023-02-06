@@ -3,6 +3,7 @@
  USE institutodb;
 
  CREATE TABLE alumno (
+  
 
    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
    nombre VARCHAR(100) NOT NULL,
