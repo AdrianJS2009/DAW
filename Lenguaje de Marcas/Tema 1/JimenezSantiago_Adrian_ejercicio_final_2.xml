@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pedido SYSTEM "JimenezSantiago_Adrian_ejercicio_final_1.dtd">
+
+
+<pedido>
+    <sucursal codigo="001">
+        <direccion>Calle 123</direccion>
+        <direccion>Ciudad XYZ</direccion>
+    </sucursal>
+    <trabajador>Pepito de Los Campos</trabajador>
+    <fecha>2022-12-31</fecha>
+    <observaciones>Ninguna</observaciones>
+    <plazo>7 días</plazo>
+    <artículos>
+        <artículo codigo="A001" unidades="2" precio="100">Artículo 1</artículo>
+        <artículo codigo="A002" unidades="3" precio="200">Artículo 2</artículo>
+    </artículos>
+</pedido>

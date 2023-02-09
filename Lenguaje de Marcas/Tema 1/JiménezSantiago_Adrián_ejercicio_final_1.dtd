@@ -1,41 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE Equipos (Equipo1, Equipo2)>
-<Equipos>
-
-	<Equipo1>
-
-		<nombreequipo>Málaga C.F</nombreequipo>
-		<ciudad>Málaga</ciudad>
-		<entrenador></entrenador>
-
-		<Jugador1 posicion="delantero">
-			<nombre>Patamito Manzano</nombre>
-			<nacionalidad>Portugal</nacionalidad>
-		</Jugador1>
-
-		<Jugador2 posicion="portero">
-			<nombre>Felipe Castaño</nombre>
-			<nacionalidad>España</nacionalidad>
-		</Jugador2>
-
-	</Equipo1>
-
-	<Equipo2>
-
-		<nombreequipo>Polideportivo Ejido</nombreequipo>
-		<ciudad>El Ejido</ciudad>
-		<entrenador></entrenador>
-
-		<Jugador1 posicion="medio">
-			<nombre>Era Kalasnikov</nombre>
-			<nacionalidad>Rusia</nacionalidad>
-		</Jugador1>
-
-		<Jugador2 posicion="defensa">
-			<nombre>Paco Destructor</nombre>
-			<nacionalidad>Alemania</nacionalidad>
-		</Jugador2>
-
-	</Equipo2>
-
-</Equipos>
+<!ELEMENT pedido (sucursal, trabajador, fecha, observaciones, plazo, artículos+)>
+<!ELEMENT sucursal (direccion+)>
+<!ATTLIST sucursal codigo CDATA #REQUIRED>
+<!ELEMENT direccion (#PCDATA)>
+<!ELEMENT trabajador (#PCDATA)>
+<!ELEMENT fecha (#PCDATA)>
+<!ELEMENT observaciones (#PCDATA)>
+<!ELEMENT plazo (#PCDATA)>
+<!ELEMENT artículos (artículo+)>
+<!ELEMENT artículo (#PCDATA)>
+<!ATTLIST artículo codigo CDATA #REQUIRED>
+<!ATTLIST artículo unidades CDATA #REQUIRED>
+<!ATTLIST artículo precio CDATA #REQUIRED>
+<!ATTLIST artículo observaciones CDATA #IMPLIED>
