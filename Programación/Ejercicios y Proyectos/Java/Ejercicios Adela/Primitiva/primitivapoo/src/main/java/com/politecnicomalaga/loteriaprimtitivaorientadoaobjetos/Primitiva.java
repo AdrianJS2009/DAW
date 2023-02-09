@@ -35,20 +35,22 @@ public class Primitiva {
                     int num6 = scanner.nextInt();
                     Boleto boleto = new Boleto(num1, num2, num3, num4, num5, num6);
                     int aciertos = sorteo.comprobarAciertos(boleto);
-                    boolean tieneComplementario = sorteo.tieneComplementario(boleto);
+                    //boolean tieneComplementario = sorteo.tieneComplementario(boleto);
 
                     if (aciertos == 6) {
-                        System.out.println("¡Enhorabuena, has ganado el gordo con 6 aciertos!");
-                    } else if (aciertos == 5 && tieneComplementario) {
-                        System.out.println("¡Enhorabuena, has ganado con 5 aciertos más complementario!");
+                        System.out.println("¡Enhorabuena! ¡Has ganado el primer premio!");
                     } else if (aciertos == 5) {
-                        System.out.println("¡Enhorabuena, has ganado con 5 aciertos!");
+                        System.out.println("¡Enhorabuena! ¡Has ganado el segundo premio!");
                     } else if (aciertos == 4) {
-                        System.out.println("¡Enhorabuena, has ganado con 4 aciertos!");
+                        System.out.println("¡Enhorabuena! ¡Has ganado el tercer premio!");
                     } else if (aciertos == 3) {
-                        System.out.println("¡Enhorabuena, has ganado con 3 aciertos!");
+                        System.out.println("¡Enhorabuena! ¡Has ganado el cuarto premio!");
+                    } else if (aciertos == 2) {
+                        System.out.println("¡Enhorabuena! ¡Has ganado el quinto premio!");
+                    } else if (aciertos == 1) {
+                        System.out.println("¡Enhorabuena! ¡Has ganado el sexto premio!");
                     } else {
-                        System.out.println("Lo siento, no ha habido ningún acierto.");
+                        System.out.println("Lo siento, no has acertado ningún número");
                     }
                     break;
                 case 4:
