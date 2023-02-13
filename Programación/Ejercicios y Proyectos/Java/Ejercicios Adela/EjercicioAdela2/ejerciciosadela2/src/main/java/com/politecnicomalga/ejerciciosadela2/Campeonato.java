@@ -6,32 +6,34 @@ import java.util.Scanner;
 public class Campeonato {
     private Piloto[] pilotos;
 
+    // Constructor
     public Campeonato() {
         Scanner sc = new Scanner(System.in);
         Random r = new Random();
         pilotos = new Piloto[6];
 
         // Carga los nombres de los pilotos
-        for (int i = 0; i < pilotos.length; i++) {
-            System.out.println("Introduce el nombre del piloto " + (i + 1) + ":");
-            String nombre = sc.nextLine();
-            pilotos[i] = new Piloto(nombre);
+        for (int i = 0; i < pilotos.length; i++) { // 6 pilotos
+            System.out.println("Introduce el nombre del piloto " + (i + 1) + ":"); 
+            String nombre = sc.nextLine(); 
+            pilotos[i] = new Piloto(nombre); // Crea un objeto Piloto con el nombre introducido
         }
 
         // Carga los puntos de los pilotos
-        for (int i = 0; i < 3; i++) {
-            System.out.println("Prueba " + (i + 1));
-            int[] yaAsignados = new int[6];
-            for (int j = 0; j < 3; j++) {
-                int puntoAsignar = (j == 0) ? 10 : (j == 1) ? 8 : 6;
+        for (int i = 0; i < 3; i++) { 
+            System.out.println("Prueba " + (i + 1)); 
+            int[] yaAsignados = new int[6]; // Array para comprobar que no se repitan los pilotos
+            for (int j = 0; j < 3; j++) { 
+                int puntoAsignar = (j == 0) ? 10 : (j == 1) ? 8 : 6; // Asigna los puntos en función de la posición
                 int piloto;
-                do {
+                
+                // Asigna un piloto aleatorio que no haya sido asignado ya
+                do { 
                     piloto = r.nextInt(6);
                 } while (yaAsignados[piloto] == 1);
                 yaAsignados[piloto] = 1;
                 pilotos[piloto].asignarPunto(i, puntoAsignar);
-                System.out
-                        .println("Asignados " + puntoAsignar + " puntos al piloto " + pilotos[piloto].obtenerNombre());
+                System.out.println("Asignados " + puntoAsignar + " puntos al piloto " + pilotos[piloto].obtenerNombre());
             }
         }
     }
