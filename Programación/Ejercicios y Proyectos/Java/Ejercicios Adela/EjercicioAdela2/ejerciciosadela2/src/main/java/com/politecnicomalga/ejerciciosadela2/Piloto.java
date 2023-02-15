@@ -11,19 +11,22 @@ public class Piloto {
         this.nombre = nombre;
     }
     
-    public void asignarPunto(int prueba, int punto) {
-        this.puntos[prueba] = punto; // Asigna el punto a la prueba correspondiente
-    }
+    // Métodos
 
-    public int obtenerPuntosTotales() { // Devuelve la suma de los puntos de todas las pruebas
+    // Asigna un punto a la prueba indicada
+    public void asignarPunto(int prueba, int punto) {
+        this.puntos[prueba] = punto;
+    }
+    // Devuelve la suma de los puntos de todas las pruebas
+    public int obtenerPuntosTotales() {
         int suma = 0;
         for (int punto : puntos) {
             suma += punto;
         }
         return suma;
     }
-
-    public String obtenerNombre() { // Devuelve el nombre del piloto
+    // Devuelve el nombre del piloto
+    public String obtenerNombre() {
         return this.nombre;
     }
 }

@@ -24,7 +24,7 @@ public class Campeonato {
             System.out.println("Prueba " + (i + 1)); 
             int[] yaAsignados = new int[6]; // Array para comprobar que no se repitan los pilotos
             for (int j = 0; j < 3; j++) { 
-                int puntoAsignar = (j == 0) ? 10 : (j == 1) ? 8 : 6; // Asigna los puntos en función de la posición
+                int puntoAsignar = (j == 0) ?  10 : (j == 1) ? 8 : 6; // Asigna los puntos en función de la posición. "?" es un operador ternario, osea, es un if/else.
                 int piloto;
                 
                 // Asigna un piloto aleatorio que no haya sido asignado ya
