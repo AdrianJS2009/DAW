@@ -1,0 +1,32 @@
+<?xml encoding="utf-8"?>
+
+<!ELEMENT listafacturas (factura)+>
+<!ATTLIST listafacturas
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT factura (emisor,pagador,importe)>
+<!ATTLIST factura
+    xmlns CDATA #FIXED ''
+    fecha NMTOKEN #IMPLIED>
+
+<!ELEMENT emisor (nombre,volumenventas)>
+<!ATTLIST emisor
+    xmlns CDATA #FIXED ''
+    cif NMTOKEN #REQUIRED>
+
+<!ELEMENT pagador (nombre)>
+<!ATTLIST pagador
+    xmlns CDATA #FIXED ''
+    cif NMTOKEN #REQUIRED>
+
+<!ELEMENT importe (#PCDATA)>
+<!ATTLIST importe
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT volumenventas (#PCDATA)>
+<!ATTLIST volumenventas
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT nombre (#PCDATA)>
+<!ATTLIST nombre
+    xmlns CDATA #FIXED ''>
