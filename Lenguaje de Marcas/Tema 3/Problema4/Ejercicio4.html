@@ -1,0 +1,41 @@
+<!--Definir la misma fuente, color y tamaño de fuente para los elementos p (párrafo) y h6 
+(tener en cuenta que cuando vea la página el texto que se encuentra en el elemento 
+h6 difiere del texto que se encuentra dentro del párrafo por la propiedad font-weight 
+(ya que el elemento h6 es de tipo bold por defecto y el elemento p tiene por defecto 
+normal).--->
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>Títulos con estilo</title>
+    <style>
+    h6, p {
+      font-family: Arial, Helvetica, sans-serif;
+      color: antiquewhite;
+      font-size: 20px;
+    }
+      
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1 style="background-color:aquamarine;">Título1</h1>
+    </div>
+    <div>
+      <h2 style="background-color: rgb(47, 78, 114);">Título2</h2>
+    </div>
+    <div>
+      <h3 style="background-color: rgb(165, 179, 44);">Título3</h3>
+    </div>
+    <div>
+      <h4 style="background-color: rgb(0, 0, 255);">Título4</h4>
+    </div>
+    <div>
+      <h5 style="background-color: rgb(0, 255, 255);">Título5</h5>
+    </div>
+    <div>
+      <h6 style="background-color: rgb(184, 134, 11);">Título6</h6>
+      <p>Texto de ejemplo</p>
+    </div>
+  </body>
