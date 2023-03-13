@@ -13,7 +13,7 @@
     </elemento1>
 </root>
 
-<!-- Para que un XML sea válido, debemos crear un archivo que se encargue de eso. En este caso podemos usar DTD o XML-SCHEMAS. -->
+<!-- Para que un XML sea válido, debemos crear un archivo de validación. En este caso podemos usar DTD o XML-SCHEMAS. -->
 
 ```xml
 
@@ -116,7 +116,7 @@ elemento4 (ninguna, 1 o muchas veces, siempre junto al elemento 3, mientras no a
 
     <!-- Para declarar y enlazar un XSD debemos hacer lo siguiente: -->
 
-<!-- En el XML -->
+<!-- En el XML: -->
 <?xml version="1.0" encoding="UTF-8"?>
 <elementoRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="path/archivo.xsd">
 <!-- Contenido XML -->
@@ -296,7 +296,7 @@ elemento4 (ninguna, 1 o muchas veces, siempre junto al elemento 3, mientras no a
     <fecha>24-01-2005</fecha>
     hemos recibido su pedido de
     <titulo>Raices</titulo>
-    . Su título será enviado en 2 días hábiles desde la recepción del pedido.Gracias, Ediciones Aranda.
+    . Su título será enviado en 2 días hábiles desde la recepción del pedido. Gracias, Ediciones Aranda.
 </confimacionPedido>
 
     <!-- ATRIBUTOS -->
@@ -336,3 +336,68 @@ elemento4 (ninguna, 1 o muchas veces, siempre junto al elemento 3, mientras no a
     </xs:complexType>
 <xs:element>
 ```
+
+<!-- Un archivo XML está compuesto por elementos y atributos que definen una estructura de datos jerárquica. Para validar que un archivo XML sea válido, es necesario crear un archivo de validación. Hay dos opciones: DTD y XML-SCHEMA. -->
+<!--DTD-->
+<!--Un DTD define la estructura de un documento XML y permite validar que éste cumple con la estructura prevista. Los elementos de un DTD son los siguientes:-->
+<!-- Declaración de DTD: -->
+<!DOCTYPE nombreDocumento [ <!-- DTD --> ]>
+<!-- Declaración de elementos: -->
+<!ELEMENT elementoNombre tipoContenido>
+<!-- Los tipos de contenido que puede tener un elemento son los siguientes: -->
+<!ELEMENT elementoPadre (hijo1, hijo2, hijo3)>
+<!ELEMENT elementoPadre (#PCDATA)>
+<!ELEMENT elementoPadre EMPTY>
+<!ELEMENT elementoPadre ANY>
+<!-- Las cardinalidades indican cuántas veces puede aparecer un elemento. Los operadores son: -->
+elemento? <!-- 0/1 Aparición -->
+elemento+ <!-- 1/N Apariciones -->
+elemento* <!-- 0/N Apariciones -->
+elemento <!-- 1 Aparición -->
+
+<!-- Las elecciones se representan con el operador |-->
+elemento1 | elemento2
+
+<!-- Se pueden combinar operadores de cardinalidad y elecciones-->
+(elemento1+ | elemento2?) | (elemento3, elemento4*)
+
+<!-- Declaración de atributos: -->
+<!ATTLIST elemento atributo tipo "valorPorDefecto" #Propiedad>
+<!--Los tipos de atributos son:-->
+<!ATTLIST elemento atributo CDATA>
+<!ATTLIST elemento atributo (España|Italia)>
+<!ATTLIST elemento atributo ID #IMPLIED>
+<!ATTLIST elemento atributo IDREF>
+<!ATTLIST elemento atributo NMTOKEN>
+<!--Las propiedades de atributos son:-->
+<!ATTLIST elemento atributo tipo #FIXED "valorFijo">
+<!ATTLIST elemento atributo tipo #REQUIRED>
+<!ATTLIST elemento atributo tipo #IMPLIED>
+<!-- XML-SCHEMA (XSD) -->
+<!--XML-SCHEMA es un espacio de nombres XML que restringe un XML. Para enlazar un XSD en un archivo XML:-->
+<?xml version="1.0" encoding="UTF-8"?>
+<elementoRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="path/archivo.xsd">
+<!-- Los elementos de un XSD son los siguientes: -->
+<!-- Elementos Simple (NO TIENEN HIJOS NI ATRIBUTOS) -->
+<xs:element name="nombreElemento" type="xs:tipoPrimitivo"/>
+
+<!-- Los tipos primitivos principales son los siguientes: -->
+xs:string
+xs:integer
+xs:float
+xs:double
+xs:boolean
+xs:decimal
+xs:date
+xs:time
+xs:dateTime
+xs:positiveInteger
+
+<!-- Elementos Complejos (PUEDEN TENER HIJOS Y ATRIBUTOS) -->
+<xs:element name="nombreElemento">
+xs:complexType
+xs:sequence
+<xs:element name="hijo1" type="xs:tipoPrimitivo"/>
+<xs:element name="hijo2" type="xs:tipoComplejo"/>
+</xs:sequence>
+<xs:attribute name="atributo1" type="xs:tipoPrimitivo"/>
