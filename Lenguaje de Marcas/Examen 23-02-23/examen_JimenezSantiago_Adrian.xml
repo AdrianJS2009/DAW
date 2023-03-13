@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE inventario SYSTEM "examen_JimenezSantiago_Adrian.dtd" >
+<inventario>
+      <inventario>
+        <objeto codigo ="C001">
+			<mesa>
+			<tipo>Modular</tipo>
+			<localizacion>España</localizacion>
+			</mesa>
+			<ordenador>
+			<procesador fabricante ="AMD">Ryzen 6
+			</procesador>
+			<memoria valor ="MB">516</memoria>
+			<discoduro>HDD</discoduro>
+			</ordenador>
+		</objeto>
+</inventario>
